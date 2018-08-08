@@ -8,11 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    Context context;
 
-    public PagerAdapter(FragmentManager fm, Context context) {
+    public PagerAdapter(FragmentManager fm) {
         super(fm);
-        this.context = context;
     }
 
     @Override

@@ -29,15 +29,13 @@ public class PageFragment extends Fragment implements View.OnClickListener {
     private int position;
     private SharedPreferences preferences;
     private SharedPreferences.OnSharedPreferenceChangeListener prefListener;
-    private Button button;
+    private Button enterActivityButton;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_page, container, false);
-
-        return rootView;
+        return inflater.inflate(R.layout.fragment_page, container, false);
     }
 
     @Override
@@ -45,13 +43,13 @@ public class PageFragment extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
 
         Bundle args = getArguments();
-        position = args.getInt(Utils.PAGE_POSITION);
+        position = args.getInt(Utils.PAGE_POSITION,0);
 
-        TextView tv = view.findViewById(R.id.position_tv);
-        tv.setText(Integer.toString(position + 1));
+        TextView positionTV = view.findViewById(R.id.position_tv);
+        positionTV.setText(Integer.toString(position + 1));
 
-        button = view.findViewById(R.id.enter_activity_button);
-        button.setOnClickListener(this);
+        enterActivityButton = view.findViewById(R.id.enter_activity_button);
+        enterActivityButton.setOnClickListener(this);
 
        setStatusForEntryButton();
 
@@ -72,9 +70,9 @@ public class PageFragment extends Fragment implements View.OnClickListener {
     void setStatusForEntryButton(){
         final int highscore = Utils.getHighScoreFromPreferences(getActivity());
         if (position > highscore)
-            button.setEnabled(false);
+            enterActivityButton.setEnabled(false);
         else
-            button.setEnabled(true);
+            enterActivityButton.setEnabled(true);
 
     }
 
@@ -124,11 +122,9 @@ public class PageFragment extends Fragment implements View.OnClickListener {
                     intent = new Intent(getActivity(), Activity10.class);
                     break;
             }
-            if (intent != null) {
                 intent.putExtra(Utils.PAGE_POSITION, position);
-
                 startActivity(intent);
-            }
+
         }
     }
 }

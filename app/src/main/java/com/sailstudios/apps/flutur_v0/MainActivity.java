@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setClipToPadding(false);
         viewPager.setPageMargin(36);
 
-        adapter = new PagerAdapter(getSupportFragmentManager(), this);
+        adapter = new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
