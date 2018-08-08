@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sailstudios.apps.flutur_v0">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.Activity1" android:label="@string/activity1"/>
+        <activity android:name=".Activities.Activity2" android:label="@string/activity2"/>
+        <activity android:name=".Activities.Activity3" android:label="@string/activity3"/>
+        <activity android:name=".Activities.Activity4" android:label="@string/activity4"/>
+        <activity android:name=".Activities.Activity5" android:label="@string/activity5"/>
+        <activity android:name=".Activities.Activity6" android:label="@string/activity6"/>
+        <activity android:name=".Activities.Activity7" android:label="@string/activity7"/>
+        <activity android:name=".Activities.Activity8" android:label="@string/activity8"/>
+        <activity android:name=".Activities.Activity9" android:label="@string/activity9"/>
+        <activity android:name=".Activities.Activity10" android:label="@string/activity10"/>
+    </application>
+
+</manifest>

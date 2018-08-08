@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Flutur_v0</string>
+    <string name="enter_activity_button">ENTER ACTIVITY</string>
+    <string name="finish_activity">FINISH</string>
+    <string name="reset">RESET</string>
+    <string name="activity1">Activity1</string>
+    <string name="activity2">Activity2</string>
+    <string name="activity3">Activity3</string>
+    <string name="activity4">Activity4</string>
+    <string name="activity5">Activity5</string>
+    <string name="activity6">Activity6</string>
+    <string name="activity7">Activity7</string>
+    <string name="activity8">Activity8</string>
+    <string name="activity9">Activity9</string>
+    <string name="activity10">Activity10</string>
+
+</resources>
